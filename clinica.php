@@ -66,19 +66,18 @@ $aPacientes []=array("DNI"=>"23.684.385",
 
                 <tbody>
                     <?php 
-                    for ($contador=0;$contador < count ($aPacientes);$contador ++) { 
-                
-                   ?>
+                 foreach ($aPacientes as $paciente) {
+                  ?>
                 <tr>
-                    <td><?php echo $aPacientes[$contador]["DNI"]; ?></td>
-                    <td><?php echo $aPacientes[$contador]["nombre y apellido"]; ?></td>
-                    <td><?php echo $aPacientes[$contador]["edad"]; ?></td>
-                    <td><?php echo $aPacientes[$contador]["peso"]; ?></td>
-            
+                <td><?php echo $paciente["DNI"]; ?></td>
+                   <td><?php echo $paciente["nombre y apellido"];?></td>
+                    <td><?php echo $paciente["edad"];?></td>
+                    <td><?php echo $paciente["peso"];?></td>
                 </tr>
-
-                <?php 
-            } ?>
+                
+                    <?php 
+                 } ?>
+                
                 </tbody>
                 </table>
             </div>
