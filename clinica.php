@@ -1,31 +1,35 @@
 <?php
-ini_set('display_errors',1);
-ini_set('display_startup_errors',1);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$aPacientes= array();
-$aPacientes []=array("DNI"=>"33.765.012",
-"nombre y apellido"=> "Ana Acuña",
-"edad"=> "45",
-"peso" =>"81",
+$aPacientes = array();
+$aPacientes[] = array(
+    "DNI" => "33.765.012",
+    "nombre y apellido" => "Ana Acuña",
+    "edad" => "45",
+    "peso" => "81",
 );
 
-$aPacientes []=array("DNI"=>"23.684.385",
-"nombre y apellido"=> "Gonzalo Bustamante",
-"edad"=> "66",
-"peso" =>"79",
+$aPacientes[] = array(
+    "DNI" => "23.684.385",
+    "nombre y apellido" => "Gonzalo Bustamante",
+    "edad" => "66",
+    "peso" => "79",
 );
 
-$aPacientes []=array("DNI"=>"23.684.385",
-"nombre y apellido"=> "Juan Irraola",
-"edad"=> "28",
-"peso" =>"79",
+$aPacientes[] = array(
+    "DNI" => "23.684.385",
+    "nombre y apellido" => "Juan Irraola",
+    "edad" => "28",
+    "peso" => "79",
 );
 
-$aPacientes []=array("DNI"=>"23.684.385",
-"nombre y apellido"=> "Beatriz Ocampo",
-"edad"=> "50",
-"peso" =>"79",
+$aPacientes[] = array(
+    "DNI" => "23.684.385",
+    "nombre y apellido" => "Beatriz Ocampo",
+    "edad" => "50",
+    "peso" => "79",
 );
 
 
@@ -33,6 +37,7 @@ $aPacientes []=array("DNI"=>"23.684.385",
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -40,6 +45,7 @@ $aPacientes []=array("DNI"=>"23.684.385",
     <title>Listado de pacientes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+
 <body>
     <header>
 
@@ -53,35 +59,36 @@ $aPacientes []=array("DNI"=>"23.684.385",
             </div>
             <div class="row">
                 <div class="col-12">
-                <table class="table border table-hover">
-                <thead>
-                    <tr>
-                    <th>DNI:</th> 
-                    <th>Nombre y Apellido:</th>
-                    <th>Edad:</th>
-                    <th>Peso:</th>
+                    <table class="table border table-hover">
+                        <thead>
+                            <tr>
+                                <th>DNI:</th>
+                                <th>Nombre y Apellido:</th>
+                                <th>Edad:</th>
+                                <th>Peso:</th>
 
-                    </tr>
-                </thead>
+                            </tr>
+                        </thead>
 
-                <tbody>
-                    <?php 
-                 foreach ($aPacientes as $paciente) {
-                  ?>
-                <tr>
-                <td><?php echo $paciente["DNI"]; ?></td>
-                   <td><?php echo $paciente["nombre y apellido"];?></td>
-                    <td><?php echo $paciente["edad"];?></td>
-                    <td><?php echo $paciente["peso"];?></td>
-                </tr>
-                
-                    <?php 
-                 } ?>
-                
-                </tbody>
-                </table>
-            </div>
-        
+                        <tbody>
+                            <?php
+                            foreach ($aPacientes as $paciente) {
+
+                            ?>
+                                <tr>
+                                    <td><?php echo $paciente["DNI"]; ?></td>
+                                    <td><?php echo $paciente["nombre y apellido"]; ?></td>
+                                    <td><?php echo $paciente["edad"]; ?></td>
+                                    <td><?php echo $paciente["peso"]; ?></td>
+                                </tr>
+
+                            <?php
+                            } ?>
+
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
 
     </main>
@@ -89,4 +96,5 @@ $aPacientes []=array("DNI"=>"23.684.385",
 
     </footer>
 </body>
+
 </html>
