@@ -3,14 +3,11 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-if ($_POST){
-    $nombre=$_POST["txtNombre"];
-    $dni=$_POST["txtDni"];
-    $telefono=$_POST["txtTelefono"];
-    $edad=$_POST["txtEdad"];
-    if($nombre=="" && $dni=="" && $telefono=="" && $edad==""){
-        header("Location:resultado.php");
-          }
+if ($_POST) {
+    $nombre = $_POST["txtNombre"];
+    $dni = $_POST["txtDni"];
+    $telefono = $_POST["txtTelefono"];
+    $edad = $_POST["txtEdad"];
 }
 
 
@@ -30,7 +27,7 @@ if ($_POST){
 <body>
     <main class="container">
         <div class="row">
-            <div class="col-12 pb-3">
+            <div class="col-12 py-5 text-center">
                 <h1>Formulario de datos personales </h1>
             </div>
         </div>
@@ -47,14 +44,14 @@ if ($_POST){
                     </div>
                     <div class="pb-3">
                         <label form="txtTelefono">Telefono:*</label>
-                        <input type="tel" name="txtTelefono" id="txtTelefono" required class="form-control">
+                        <input type="text" name="txtTelefono" id="txtTelefono" required class="form-control">
 
                     </div>
                     <div class="pb-3">
                         <label form="txtEdad">Edad:*</label>
-                        <input type="txtEdad" name="txtEdad" id="txtEdad" required class="form-control">
+                        <input type="number" name="txtEdad" id="txtEdad" required class="form-control">
                     </div>
-                    <div class="pb-3 text-end">
+                    <div class="pb-3 float-end">
                         <button type="sublimt" name="btnIngresar" class="btn btn-primary">Enviar </button>
 
                     </div>

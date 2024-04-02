@@ -2,17 +2,13 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-if ($_POST){
-    $nombre=$_POST["txtNombre"];
-    $dni=$_POST["txtDni"];
-    $telefono=$_POST["txtTelefono"];
-    $edad=$_POST["txtEdad"];
-    if($nombre=="" && $dni=="" && $telefono=="" && $edad==""){
-       
-          }
+
+if ($_POST) {
+    $nombre = $_POST["txtNombre"];
+    $dni = $_POST["txtDni"];
+    $telefono = $_POST["txtTelefono"];
+    $edad = $_POST["txtEdad"];
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -29,14 +25,14 @@ if ($_POST){
 <body>
     <main class="container">
         <div class="row">
-            <div class="col-12 pb-3">
+            <div class="col-12 py-5 text-center">
                 <h1>Resultado de formulario</h1>
             </div>
 
         </div>
         <div class="row">
             <div class="col-12">
-                <form action="" method="POST">
+
                 <table class="table table-hover border">
                     <thead>
                         <tr>
@@ -44,20 +40,20 @@ if ($_POST){
                             <th>DNI</th>
                             <th>Telefono</th>
                             <th>Edad</th>
-
-                        </tr>
-                    <td><?php echo $nombre ?> </td>
-                    <td><?php echo $dni ?></td>
-                    <td><?php echo $telefono ?></td>
-                    <td><?php echo $edad ?></td>
                     </thead>
                     <tbody>
-                
+                        </tr>
+                        <td><?php echo $nombre ?> </td>
+                        <td><?php echo $dni ?></td>
+                        <td><?php echo $telefono ?></td>
+                        <td><?php echo $edad ?></td>
+
+
 
                     </tbody>
 
                 </table>
-                </form>
+
             </div>
 
         </div>
