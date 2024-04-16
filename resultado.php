@@ -40,6 +40,7 @@ if ($_POST) {
                             <th>DNI</th>
                             <th>Telefono</th>
                             <th>Edad</th>
+                        </tr>
                     </thead>
                     <tbody>
                         </tr>
