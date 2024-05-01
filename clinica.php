@@ -70,7 +70,7 @@ $aPacientes[] = array(
                             </tr>
                         </thead>
 
-                        <tbody>
+                        <tbody> /* para hacer con for seria for ($i=0; $i< count($aPacientes);$i++);*/
                             <?php
                             foreach ($aPacientes as $paciente) {
 
