@@ -55,7 +55,7 @@ if ($_POST) { // proceso postback, es decir procesa el pedido.
                         <label form="txtClave">Clave:</label>
                         <input type="password" name="txtClave" id="txtClave" class="form-control">
                     </div>
-                    <div>
+                    <div class="">
                         <button type="sublimt" name="btnIngresar" class="btn btn-primary">Enviar </button>
 
                     </div>
