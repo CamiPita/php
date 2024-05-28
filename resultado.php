@@ -43,13 +43,13 @@ if ($_POST) {
                         </tr>
                     </thead>
                     <tbody>
-                        </tr>
+                        <tr>
                         <td><?php echo $nombre ?> </td>
                         <td><?php echo $dni ?></td>
                         <td><?php echo $telefono ?></td>
                         <td><?php echo $edad ?></td>
 
-
+                        </tr>
 
                     </tbody>
 
