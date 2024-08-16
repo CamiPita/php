@@ -6,10 +6,13 @@ error_reporting(E_ALL);
 $valor = rand (1,5);
 
 if ($valor == 1 || $valor == 3 || $valor == 5){
-    echo "Es impar";
+    echo "El numero $valor es impar";
 } else {
-    echo "Es par";
+    echo "El número $valor es par";
 }
+
+/* Otra manera de hacer el ejercicio , en una sola línea.
+echo $valor ==1 || $valor == 3 ||$valor ==5?"El número $valor es impar": "El número $valor es par" */
 
 ?>
 
