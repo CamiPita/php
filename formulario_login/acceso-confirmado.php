@@ -18,20 +18,22 @@ error_reporting(E_ALL);
 <body>
     <main class="containter">
         <div class="row">
-            <div class="col-12 pb-3 ps-4">
+            <div class="col-10 pb-3 ps-5">
                 <h1>Bienvenid@ al sistema</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 text-center ">
+            <div class="col-10 text-center ps-5">
                 <p class="alert alert-primary" role="alert"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti accusantium amet ducimus quam ab omnis mollitia tempore quod dolorem, velit quia impedit provident iste delectus aspernatur. Sapiente provident molestias suscipit?
 
                 </p>
             </div>
             <div>
-                <div class="pb-3 text-end">
-                    <a href="index.php" type="submit" name="btnSalir" class="btn btn-primary" >Salir</a>
+                <div class="col-10">
+                    <div class="text-end">
+                        <a href="index.php" type="submit" name="btnSalir" class="btn btn-primary">Salir</a>
 
+                    </div>
                 </div>
             </div>
 
