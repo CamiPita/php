@@ -25,7 +25,6 @@ error_reporting(E_ALL);
         <div class="row">
             <div class="col-10 text-center ps-5">
                 <p class="alert alert-primary" role="alert"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti accusantium amet ducimus quam ab omnis mollitia tempore quod dolorem, velit quia impedit provident iste delectus aspernatur. Sapiente provident molestias suscipit?
-
                 </p>
             </div>
             <div>
