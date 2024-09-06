@@ -2,27 +2,31 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
- 
-if($_POST) {
-    $iva=$_POST["txtIva"];
-    $sinIva=$_POST["txtSinIva"];
-    $conIva=$_POST["txtConIva"];
-    $ivaCantidad=$_POST["txtIva"];
+
+//Hay que inicializarlo en cero a las variables que creo, para que comience en cero.
+$iva = 0;
+$sinIva = 0;
+$conIva = 0;
+$ivaCantidad = 0;
+//Aca pregunto si es POST.
+if ($_POST) {
+    $iva = $_POST["lstIva"];
+    $sinIva = ($_POST["txtSinIva"]) > 0 ? $_POST["txtSinIva"] : 0; //Hago esta cuenta donde txtsiniva es mayor a cero,si es imprime eso,siino es cero.
+    $conIva = ($_POST["txtConIva"]) > 0 ? $_POST["txtConIva"] : 0;
+
+    //Dado un importe sin IVA, Precio con IVA = importe * (21/100+1)
+    if ($sinIva > 0) {
+        $conIva = $sinIva * ($iva / 100 + 1);
+    }
+
+    //Dado un importe con IVA, Precio con IVA = importe / (21/100+1)
+
+    if ($conIva > 0) {
+        $sinIva = $conIva / ($iva / 100 + 1);
+    }
+    //Iva cantidad es Precio con IVA - Precio sin IVA.
+    $ivaCantidad = $conIva - $sinIva;
 }
-
-
-    /*Precio sin iva:
-    if($sinIva=$conIva*($iva/100+1)){
-    }
-    //Precio con Iva:
-    if($conIva=$sinIva/($iva/100+1)){
-
-    }
-    //Iva solo es:
-    if($iva=$sinIva+$conIva){
-
-    } */
-
 
 
 ?>
@@ -48,8 +52,8 @@ if($_POST) {
             <div class="col-2">
                 <form action="" method="post">
                     <div class="p-2">
-                        <label for="txtIva">IVA:</label>
-                        <select name="txtIva" id="txtIva" class="form-control">
+                        <label for="">IVA:</label>
+                        <select name="lstIva" id="lstIva" class="form-control">
                             <option value="" disabled selected>Seleccionar</option>
                             <option value="10.5">10.5</option>
                             <option value="19">19</option>
@@ -58,12 +62,12 @@ if($_POST) {
                         </select>
                     </div>
                     <div class="p-2">
-                        <label form="txtSinIva">Precio sin IVA:</label>
-                        <input type="txtSinIva" name="txtSinIva" id="txtSinIva" class="form-control">
+                        <label for="">Precio sin IVA:</label>
+                        <input type="txt" name="txtSinIva" id="txtSinIva" class="form-control">
                     </div>
                     <div class="p-2">
-                        <label form="txtConIva">Precio con IVA:</label>
-                        <input type="txtConnIva" name="txtConIva" id="txConIva" class="form-control">
+                        <label for="">Precio con IVA:</label>
+                        <input type="txt" name="txtConIva" id="txConIva" class="form-control">
                     </div>
                     <div class="p-2">
                         <button type="submit" class="btn btn-primary">CALCULAR</button>
@@ -76,19 +80,19 @@ if($_POST) {
                     <tbody>
                         <tr>
                             <th>IVA:</th>
-                            <td><?php echo $iva ?>%</td>
+                            <td><?php echo $iva; ?>%</td>
                         </tr>
                         <tr>
                             <th>Precio sin IVA:</th>
-                            <td><?php echo $sinIva ?></td>
+                            <td>$<?php echo number_format(($sinIva), 2, ",", "."); ?></td>
                         </tr>
                         <tr>
                             <th>Precio con IVA:</th>
-                            <td><?php echo $conIva ?></td>
+                            <td>$<?php echo number_format(($conIva), 2, ",", "."); ?></td>
                         </tr>
                         <tr>
                             <th>IVA cantidad:</th>
-                            <td><?php echo $ivaCantidad ?></td>
+                            <td>$<?php echo number_format(($ivaCantidad), 2, ",", "."); ?></td>
                         </tr>
 
                     </tbody>

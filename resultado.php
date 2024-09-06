@@ -4,11 +4,11 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-if($_POST) {
-    $nombre=$_POST["txtNombre"];
-    $dni=$_POST["txtDni"];
-    $telefono=$_POST["txtTelefono"];
-    $edad=$_POST["txtEdad"];
+if ($_POST) {
+    $nombre = $_POST["txtNombre"];
+    $dni = $_POST["txtDni"];
+    $telefono = $_POST["txtTelefono"];
+    $edad = $_POST["txtEdad"];
 }
 
 ?>
@@ -45,19 +45,16 @@ if($_POST) {
                     </thead>
 
                     <tbody>
-                        
-                    <?php
 
-                        ?>
-                            <tr>
-                                <td><?php echo $nombre ?></td>
-                                <td><?php echo $dni; ?></td>
-                                <td><?php echo $telefono ;?></td>
-                                <td><?php echo $edad ; ?></td>
+                        <tr>
+                            <td><?php echo $nombre ?></td>
+                            <td><?php echo $dni; ?></td>
+                            <td><?php echo $telefono; ?></td>
+                            <td><?php echo $edad; ?></td>
 
-                            </tr>
-                    
-                 
+                        </tr>
+
+
                     </tbody>
                 </table>
             </div>
