@@ -11,7 +11,7 @@ $ivaCantidad = 0;
 //Aca pregunto si es POST.
 if ($_POST) {
     $iva = $_POST["lstIva"];
-    $sinIva = ($_POST["txtSinIva"]) > 0 ? $_POST["txtSinIva"] : 0; //Hago esta cuenta donde txtsiniva es mayor a cero,si es imprime eso,siino es cero.
+    $sinIva = ($_POST["txtSinIva"]) > 0 ? $_POST["txtSinIva"] : 0; //Hago esta cuenta donde txtsiniva es mayor a cero,si es imprime eso,sino es cero.
     $conIva = ($_POST["txtConIva"]) > 0 ? $_POST["txtConIva"] : 0;
 
     //Dado un importe sin IVA, Precio con IVA = importe * (21/100+1)
